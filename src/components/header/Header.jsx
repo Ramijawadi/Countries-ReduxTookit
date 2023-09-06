@@ -1,6 +1,12 @@
 import "./header.css";
 import { Outlet } from "react-router-dom";
 import { useState } from "react";
+import { MaterialUISwitch } from "./Switcher";
+
+
+
+//mui switch
+
 
 const Header = () => {
   const [darkTheme, setDarkTheme] = useState("false");
@@ -13,17 +19,24 @@ const Header = () => {
   return (
     <>
       <header className="header">
-        <h1>Where in the world?</h1>
-        {darkTheme ? (
-          <div className="theme-light hidden" onClick={handleTheme}>
-            <i className="fa-solid fa-moon"></i>
-            <p>Dark Theme</p>
-          </div>
+      
+        {!darkTheme ? (
+          // <div className="theme-light hidden" onClick={handleTheme}>
+          //   <i className="fa-solid fa-moon"></i>
+          //   <p>Dark Mode</p>
+          // </div>
+          <>
+          <h1 className="title-dark">Welcome in The world </h1>
+          <MaterialUISwitch onClick={handleTheme}  />
+          
+          </>
         ) : (
-          <div className="theme-dark" onClick={handleTheme}>
-            <i className="fa-solid fa-sun"></i>
-            <p>Light Theme</p>
-          </div>
+           <>
+             <h1 className="title">Welcome in The world </h1>
+          <MaterialUISwitch onClick={handleTheme}  />
+        
+        
+          </>
         )}
       </header>
       <Outlet />

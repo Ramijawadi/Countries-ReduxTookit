@@ -2,10 +2,31 @@
     background-color: var(--color-white);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 2rem 5rem;
     box-shadow: 5px 5px 5px #eae3e3;
   }
+
+  .title {
+      background: linear-gradient(to right, #b09a9a 0%, #670828 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 6rem;
+      font-family: 'Poppins', sans-serif;
+   
+ }
+
+ .title-dark{
+
+  
+  background: linear-gradient(to right, #670828 0%, #b09a9a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 6rem;
+  font-family: 'Poppins', sans-serif;
+ }
+  
+  
   
   .main-container.dark .header {
     background-color: var(--dark-blue-elements);
